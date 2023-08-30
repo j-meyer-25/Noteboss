@@ -3,7 +3,7 @@ package com.onu.noteboss;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-// main
+
 public class NotecardMain extends AppCompatActivity {
 
     @Override
