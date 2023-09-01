@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Noteboss</string>
+    <color name="background">#bdbdbd</color>
+    <color name="white">#FFFFFF</color>
 </resources>
