@@ -7,38 +7,117 @@
     android:background="@color/background"
     tools:context=".NotecardMain">
 
+    <Button
+        android:id="@+id/scrollFlip"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="607dp"
+        android:layout_marginBottom="482dp"
+        android:text="Change Scope"
+        app:layout_constraintBottom_toTopOf="@+id/sticker1Stuck"
+        app:layout_constraintEnd_toStartOf="@+id/sticker2Stuck"
+        app:layout_constraintStart_toEndOf="@+id/categoryScroll"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/front"
         android:layout_width="869dp"
         android:layout_height="535dp"
         android:layout_marginEnd="278dp"
-        android:adjustViewBounds="true"
-        android:cropToPadding="false"
-        android:rotation="0"
-        android:rotationX="0"
-        android:rotationY="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/scrollView2"
+        app:layout_constraintStart_toEndOf="@+id/categoryScroll"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/b5e858e124eadcf7a9010d67137501bf" />
+        app:srcCompat="@drawable/note" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="869dp"
+        android:layout_height="535dp"
+        android:layout_marginEnd="278dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toEndOf="@+id/categoryScroll"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.506"
+        app:srcCompat="@drawable/note" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/categoryScroll"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_marginStart="1dp"
-        android:layout_marginEnd="326dp"
+        android:layout_marginEnd="18dp"
         android:background="@color/white"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/scrollFlip"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/categoryButton1"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:capitalize="none"
+                android:text="History"
+                android:textSize="34sp"
+                tools:layout_editor_absoluteX="465dp"
+                tools:layout_editor_absoluteY="30dp" />
+
+            <Button
+                android:id="@+id/categoryButton2"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:capitalize="none"
+                android:text="Computer Arch."
+                android:textSize="34sp"
+                tools:layout_editor_absoluteX="465dp"
+                tools:layout_editor_absoluteY="30dp" />
+
+            <Button
+                android:id="@+id/categoryButton3"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:capitalize="none"
+                android:text="Networks"
+                android:textSize="34sp"
+                tools:layout_editor_absoluteX="465dp"
+                tools:layout_editor_absoluteY="30dp" />
+
+            <Button
+                android:id="@+id/categoryButton4"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:backgroundTint="@android:color/holo_purple"
+                android:capitalize="none"
+                android:text="Circuits"
+                android:textSize="34sp"
+                tools:layout_editor_absoluteX="465dp"
+                tools:layout_editor_absoluteY="30dp" />
+
+            <Button
+                android:id="@+id/categoryButton5"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:capitalize="none"
+                android:text="Photography"
+                android:textSize="34sp"
+                tools:layout_editor_absoluteX="465dp"
+                tools:layout_editor_absoluteY="30dp" />
+        </LinearLayout>
     </ScrollView>
 
     <EditText
@@ -55,15 +134,87 @@
         android:paddingRight="20dp"
         android:saveEnabled="true"
         android:selectAllOnFocus="true"
-        android:text="The quick brown fox jumped over the quick brown foxed jumped over the quick brown foxe jumped over over over the lazy dog"
+        android:text="Who was the US president that led the New Deal?"
         android:textIsSelectable="true"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/front"
+        app:layout_constraintEnd_toEndOf="@+id/front"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/front"
+        app:layout_constraintTop_toTopOf="@+id/front"
         app:layout_constraintVertical_bias="0.765" />
+
+    <EditText
+        android:id="@+id/mainText2"
+        android:layout_width="869dp"
+        android:layout_height="373dp"
+        android:editable="true"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:gravity="top"
+        android:hint="Click to type a note"
+        android:inputType="textCapSentences|textMultiLine"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:saveEnabled="true"
+        android:selectAllOnFocus="true"
+        android:text="Franklin D. Roosevelt, 1933 - 1939"
+        android:textIsSelectable="true"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/front"
+        app:layout_constraintEnd_toEndOf="@+id/front"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/front"
+        app:layout_constraintTop_toTopOf="@+id/front"
+        app:layout_constraintVertical_bias="0.765" />
+
+    <ImageView
+        android:id="@+id/sticker3Stuck"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="251dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="118dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:src="@drawable/sticker3"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/sticker2Stuck"
+        app:layout_constraintEnd_toStartOf="@+id/flip"
+        app:layout_constraintStart_toStartOf="@+id/sticker2Stuck"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/sticker2Stuck"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="289dp"
+        android:layout_marginBottom="118dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:rotation="-6"
+        android:src="@drawable/sticker2"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scrollFlip"
+        app:layout_constraintTop_toBottomOf="@+id/sticker3Stuck" />
+
+    <ImageView
+        android:id="@+id/sticker1Stuck"
+        android:layout_width="180dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="310dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:rotation="7"
+        android:src="@drawable/sticker1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mainText"
+        app:layout_constraintTop_toBottomOf="@+id/scrollFlip" />
 
     <EditText
         android:id="@+id/headerText"
@@ -77,14 +228,148 @@
         android:paddingRight="20dp"
         android:saveEnabled="true"
         android:selectAllOnFocus="true"
-        android:text="This is the header text. Test tes test"
+        android:text="History 101"
         android:textIsSelectable="true"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/mainText"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/front"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/front"
+        app:layout_constraintTop_toTopOf="@+id/front"
         app:layout_constraintVertical_bias="0.022" />
 
+    <EditText
+        android:id="@+id/headerText2"
+        android:layout_width="869dp"
+        android:layout_height="100dp"
+        android:editable="true"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:inputType="textCapSentences|textMultiLine"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:saveEnabled="true"
+        android:selectAllOnFocus="true"
+        android:text="ANSWER"
+        android:textIsSelectable="true"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/mainText"
+        app:layout_constraintEnd_toEndOf="@+id/front"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/front"
+        app:layout_constraintTop_toTopOf="@+id/front"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="1036dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="39dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.251"
+        app:layout_constraintStart_toEndOf="@+id/categoryScroll"
+        app:layout_constraintTop_toBottomOf="@+id/sticker2Stuck">
+
+        <LinearLayout
+            android:id="@+id/Container"
+            android:layout_width="1800dp"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/sticker1"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/sticker1" />
+
+            <ImageView
+                android:id="@+id/sticker2"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/sticker2" />
+
+            <ImageView
+                android:id="@+id/sticker3"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/sticker3" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/imageScroll"
+        android:layout_width="453dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1470dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/example"
+                android:layout_width="260dp"
+                android:layout_height="190dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/smaller" />
+
+            <ImageView
+                android:id="@+id/example2"
+                android:layout_width="260dp"
+                android:layout_height="190dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/smaller" />
+
+            <ImageView
+                android:id="@+id/example3"
+                android:layout_width="260dp"
+                android:layout_height="190dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/smaller" />
+
+            <ImageView
+                android:id="@+id/example4"
+                android:layout_width="260dp"
+                android:layout_height="190dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/smaller" />
+
+            <ImageView
+                android:id="@+id/example5"
+                android:layout_width="260dp"
+                android:layout_height="190dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/smaller" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/flip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="384dp"
+        android:text="Flip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
